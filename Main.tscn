@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Saws.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Node2D"]
+
+[node name="Saws" parent="." instance=ExtResource( 3 )]
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 99, 155 )
+
+[node name="Platform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 353, 1383 )
+
+[node name="SpawnPointsOfPlatforms" type="Node" parent="."]
+
+[node name="SpawnPoint" type="Position2D" parent="SpawnPointsOfPlatforms"]
+position = Vector2( 123, 1367 )
