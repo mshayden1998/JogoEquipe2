@@ -12,6 +12,7 @@ config_version=4
 
 config/name="JogoEquipe2"
 config/description="Jogo da Equipe 2 da cadeira Fundamentos de Jogos da disciplina Jogos Digitais, orientador Bernardo."
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -21,6 +22,7 @@ window/size/height=1280
 window/size/test_width=360
 window/size/test_height=640
 window/handheld/orientation="sensor_portrait"
+window/stretch/mode="2d"
 
 [gui]
 
