@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var screen_size
 export (PackedScene) var Platform
 
@@ -8,7 +9,7 @@ func _ready():
 	screen_size = get_viewport_rect().size
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass
 
 
