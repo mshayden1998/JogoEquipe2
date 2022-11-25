@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/ui/videotype.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://FinalScreen.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 42
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="Theme" id=2]
+default_font = SubResource( 1 )
+
+[node name="FinalScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = SubResource( 2 )
+script = ExtResource( 2 )
+
+[node name="BtnRestart" type="Button" parent="."]
+margin_left = 323.0
+margin_top = 602.0
+margin_right = 420.0
+margin_bottom = 622.0
+button_mask = 3
+text = "BTN_RESTART"
+icon_align = 1
+
+[node name="BtnExit" type="Button" parent="."]
+margin_left = 333.0
+margin_top = 837.0
+margin_right = 404.0
+margin_bottom = 857.0
+text = "BTN_EXIT"
+
+[connection signal="button_up" from="BtnRestart" to="." method="_on_BtnRestart_button_up"]
+[connection signal="button_up" from="BtnExit" to="." method="_on_BtnExit_button_up"]

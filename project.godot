@@ -53,6 +53,11 @@ player_jump={
  ]
 }
 
+[locale]
+
+test="en"
+translations=PoolStringArray( "res://assets/ui/text.en.translation", "res://assets/ui/text.pt.translation" )
+
 [physics]
 
 common/enable_pause_aware_picking=true
