@@ -9,8 +9,10 @@ const MAX_FALL_SPEED = 1000
 onready var sprite = $WoodDude
 var y_velo = 0
 var facing_right = false
+var life = 2
 
 signal got_hit
+signal died
 
 
 func _ready():
@@ -38,6 +40,12 @@ func _physics_process(_delta):
 
 
 func _process(delta):
+	# reseta o personagem pro meio da tela caso ele tome dano
+	# emite um sinal que tomou dano
 	if position.y < 5 or position.y > screen_size.y - 5:
-		position = screen_size
-		emit_signal("got_hit")
+		if life != 0:
+			position = Vector2(screen_size.x / 2, screen_size.y / 2)
+			life -= 1
+			emit_signal("got_hit")
+		else:
+			emit_signal("died")
