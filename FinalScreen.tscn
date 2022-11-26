@@ -1,38 +1,51 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assets/ui/videotype.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://UI.theme" type="Theme" id=1]
 [ext_resource path="res://FinalScreen.gd" type="Script" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 42
-outline_size = 3
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="Theme" id=2]
-default_font = SubResource( 1 )
 
 [node name="FinalScreen" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = SubResource( 2 )
+theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
+[node name="FlatBackground" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.294118, 0.133333, 0.133333, 1 )
+
 [node name="BtnRestart" type="Button" parent="."]
-margin_left = 323.0
-margin_top = 602.0
-margin_right = 420.0
-margin_bottom = 622.0
+margin_left = 214.0
+margin_top = 833.0
+margin_right = 534.0
+margin_bottom = 891.0
 button_mask = 3
 text = "BTN_RESTART"
 icon_align = 1
 
 [node name="BtnExit" type="Button" parent="."]
-margin_left = 333.0
-margin_top = 837.0
-margin_right = 404.0
-margin_bottom = 857.0
+margin_left = 264.0
+margin_top = 940.0
+margin_right = 486.0
+margin_bottom = 998.0
 text = "BTN_EXIT"
+
+[node name="LabelFinalMsn" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 680.0
+text = "LABEL_FINAL_MESSAGE"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="LabelPressL" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -240.0
+text = "PRESS_L"
+align = 1
+autowrap = true
 
 [connection signal="button_up" from="BtnRestart" to="." method="_on_BtnRestart_button_up"]
 [connection signal="button_up" from="BtnExit" to="." method="_on_BtnExit_button_up"]

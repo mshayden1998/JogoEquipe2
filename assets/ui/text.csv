@@ -1,3 +1,5 @@
 keys,en,pt
 BTN_RESTART,"Restart","Recomeçar"
 BTN_EXIT,"Exit","Sair"
+LABEL_FINAL_MESSAGE,"Congrats!\nYou survived for 10 seconds!","Parabéns!\nVocê sobreviveu por 10 segundos!"
+PRESS_L,"Tecle L no teu teclado para trocar para Português.", "Press L on your keyboard to switch to English."

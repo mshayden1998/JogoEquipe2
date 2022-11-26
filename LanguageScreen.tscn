@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://UI.theme" type="Theme" id=1]
+[ext_resource path="res://LanguageScreen.gd" type="Script" id=2]
+
+[node name="LanguageScreen" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Background" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.211765, 0.121569, 0.121569, 1 )
+
+[node name="ChoosePortuguese" type="Button" parent="."]
+margin_left = 67.0
+margin_top = 412.0
+margin_right = 658.0
+margin_bottom = 588.0
+text = "Jogar em Português"
+
+[node name="ChooseEnglish" type="Button" parent="."]
+margin_left = 74.0
+margin_top = 688.0
+margin_right = 660.0
+margin_bottom = 864.0
+text = "Play in English"
+
+[connection signal="pressed" from="ChoosePortuguese" to="." method="_on_ChoosePortuguese_pressed"]
+[connection signal="pressed" from="ChooseEnglish" to="." method="_on_ChooseEnglish_pressed"]
