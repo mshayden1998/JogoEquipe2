@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/ui/life_full.png" type="Texture" id=1]
+[ext_resource path="res://assets/ui/life_half.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/life_down.png" type="Texture" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="InGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LifeInfo" type="AnimatedSprite" parent="."]
+position = Vector2( 40, 39 )
+frames = SubResource( 1 )
