@@ -26,3 +26,7 @@ func _on_Player_got_hit():
 		life_info.frame += 1
 	else:
 		get_tree().reload_current_scene()
+
+
+func _on_WinTimer_timeout():
+	get_tree().change_scene("res://FinalScreen.tscn")
