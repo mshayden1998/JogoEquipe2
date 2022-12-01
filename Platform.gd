@@ -19,3 +19,6 @@ func _process(delta):
 	# seja, libera memória)
 	if position.y > screen_size.y + 5:
 		queue_free()
+	
+	if position.y > get_tree().get_nodes_in_group("player")[0].position.y + 64:
+		$CollisionShape2D.disabled = false

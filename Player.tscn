@@ -50,7 +50,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 9, 32 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 scale = Vector2( 5.08977, 5.08977 )
 script = ExtResource( 4 )
 

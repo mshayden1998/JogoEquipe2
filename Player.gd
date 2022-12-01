@@ -42,7 +42,7 @@ func _physics_process(_delta):
 func _process(delta):
 	# reseta o personagem pro meio da tela caso ele tome dano
 	# emite um sinal que tomou dano
-	if position.y < 5 or position.y > screen_size.y - 5:
+	if position.y < 90 or position.y > screen_size.y - 90:
 		if life != 0:
 			position = Vector2(screen_size.x / 2, screen_size.y / 2)
 			life -= 1

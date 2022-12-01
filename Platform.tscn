@@ -19,7 +19,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 174.5, 10 )
 
-[node name="Platform" type="KinematicBody2D"]
+[node name="Platform" type="KinematicBody2D" groups=["platforms"]]
 script = ExtResource( 2 )
 
 [node name="PlatformsSprites" type="AnimatedSprite" parent="."]
@@ -29,3 +29,4 @@ frames = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.5, 0 )
 shape = SubResource( 2 )
+disabled = true
