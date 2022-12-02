@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 var screen_size
 const MOVE_SPEED = 500
-const JUMP_FORCE = 1000
+const JUMP_FORCE = 900
 const GRAVITY = 50
 const MAX_FALL_SPEED = 1000
 onready var sprite = $WoodDude

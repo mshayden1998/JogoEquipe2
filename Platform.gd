@@ -22,3 +22,5 @@ func _process(delta):
 	
 	if position.y > get_tree().get_nodes_in_group("player")[0].position.y + 64:
 		$CollisionShape2D.disabled = false
+	else:
+		$CollisionShape2D.disabled = true
