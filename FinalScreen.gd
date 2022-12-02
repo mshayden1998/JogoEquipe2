@@ -15,3 +15,13 @@ func _on_BtnExit_button_up():
 
 func _on_BtnRestart_button_up():
 	get_tree().change_scene("res://Main.tscn")
+
+
+func _on_FinalScreen_ready():
+	$LabelFinalMsn.visible = false
+
+
+func _on_VideoPlayer_finished():
+	$LabelFinalMsn.visible = true
+	$AnimationPlayer.play("labels_fade_in")
+	$VideoPlayer.queue_free()

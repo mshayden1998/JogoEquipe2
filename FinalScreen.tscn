@@ -1,7 +1,111 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://UI.theme" type="Theme" id=1]
 [ext_resource path="res://FinalScreen.gd" type="Script" id=2]
+[ext_resource path="res://assets/ui/final_screen_anim_temp.ogv" type="VideoStream" id=3]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("LabelFinalMsn:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BtnRestart:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BtnExit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LabelPressL:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "labels_fade_in"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("LabelFinalMsn:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BtnRestart:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BtnExit:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 1.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LabelPressL:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2, 2.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="FinalScreen" type="Control"]
 anchor_right = 1.0
@@ -12,33 +116,10 @@ script = ExtResource( 2 )
 [node name="FlatBackground" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0.294118, 0.133333, 0.133333, 1 )
-
-[node name="BtnRestart" type="Button" parent="."]
-margin_left = 214.0
-margin_top = 833.0
-margin_right = 534.0
-margin_bottom = 891.0
-button_mask = 3
-text = "BTN_RESTART"
-icon_align = 1
-
-[node name="BtnExit" type="Button" parent="."]
-margin_left = 264.0
-margin_top = 940.0
-margin_right = 486.0
-margin_bottom = 998.0
-text = "BTN_EXIT"
-
-[node name="LabelFinalMsn" type="Label" parent="."]
-anchor_right = 1.0
-margin_bottom = 680.0
-text = "LABEL_FINAL_MESSAGE"
-align = 1
-valign = 1
-autowrap = true
+color = Color( 0, 0, 0, 1 )
 
 [node name="LabelPressL" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -47,5 +128,46 @@ text = "PRESS_L"
 align = 1
 autowrap = true
 
-[connection signal="button_up" from="BtnRestart" to="." method="_on_BtnRestart_button_up"]
+[node name="BtnExit" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 264.0
+margin_top = 940.0
+margin_right = 486.0
+margin_bottom = 998.0
+text = "BTN_EXIT"
+
+[node name="BtnRestart" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 214.0
+margin_top = 833.0
+margin_right = 534.0
+margin_bottom = 891.0
+button_mask = 3
+text = "BTN_RESTART"
+icon_align = 1
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -200.0
+margin_bottom = 200.0
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="LabelFinalMsn" type="Label" parent="."]
+anchor_right = 1.0
+margin_bottom = 556.0
+text = "LABEL_FINAL_MESSAGE"
+align = 1
+valign = 2
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/labels_fade_in = SubResource( 2 )
+
+[connection signal="ready" from="." to="." method="_on_FinalScreen_ready"]
 [connection signal="button_up" from="BtnExit" to="." method="_on_BtnExit_button_up"]
+[connection signal="button_up" from="BtnRestart" to="." method="_on_BtnRestart_button_up"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

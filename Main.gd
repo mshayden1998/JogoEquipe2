@@ -11,10 +11,6 @@ func _ready():
 	life_info.frame = 0
 
 
-func _physics_process(_delta):
-	pass
-
-
 func _on_SpawnTimer_timeout():
 	# criar uma nova plataforma ao zerar o timer e adiciona a cena
 	var platform = Platform.instance()
