@@ -39,7 +39,7 @@ func _physics_process(_delta):
 		y_velo = MAX_FALL_SPEED
 
 
-func _process(delta):
+func _process(_delta):
 	# reseta o personagem pro meio da tela caso ele tome dano
 	# emite um sinal que tomou dano
 	if position.y < 90 or position.y > screen_size.y - 90:

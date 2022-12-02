@@ -13,29 +13,14 @@ Platform = ExtResource( 1 )
 [node name="Saws" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 368, 131 )
+position = Vector2( 371, 605 )
 scale = Vector2( 1.83871, 1.83871 )
 
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
-position = Vector2( 371, 204 )
-
-[node name="Platform2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 93, -19 )
-
-[node name="Platform3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 694, 41 )
-
-[node name="Platform4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 290, 538 )
-
-[node name="Platform5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 711, 430 )
-
-[node name="Platform6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 132, 338 )
+position = Vector2( 368, 683 )
 
 [node name="InGame" parent="." instance=ExtResource( 4 )]
 
