@@ -17,5 +17,5 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="LifeInfo" type="AnimatedSprite" parent="."]
-position = Vector2( 40, 39 )
+position = Vector2( 43, 94 )
 frames = SubResource( 1 )
