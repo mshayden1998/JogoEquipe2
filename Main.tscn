@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Saws.tscn" type="PackedScene" id=3]
 [ext_resource path="res://InGame.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Main.gd" type="Script" id=5]
+[ext_resource path="res://InitialPlatform.tscn" type="PackedScene" id=6]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 5 )
@@ -19,15 +20,15 @@ scale = Vector2( 1.83871, 1.83871 )
 [node name="SpawnTimer" type="Timer" parent="."]
 autostart = true
 
-[node name="Platform" parent="." instance=ExtResource( 1 )]
-position = Vector2( 368, 683 )
-
 [node name="InGame" parent="." instance=ExtResource( 4 )]
 
 [node name="WinTimer" type="Timer" parent="."]
 wait_time = 40.0
 one_shot = true
 autostart = true
+
+[node name="InitPlatform" parent="." instance=ExtResource( 6 )]
+position = Vector2( 368, 690 )
 
 [connection signal="died" from="Player" to="." method="_on_Player_died"]
 [connection signal="got_hit" from="Player" to="." method="_on_Player_got_hit"]
