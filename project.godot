@@ -13,7 +13,8 @@ config_version=4
 config/name="8-bit Saw / JogoEquipe2"
 config/description="Jogo da Equipe 2 da cadeira Fundamentos de Jogos da disciplina Jogos Digitais, orientador Bernardo."
 run/main_scene="res://cutscenes/Intro.tscn"
-config/icon="res://icon.png"
+config/icon="res://8-bit_saw_icon.png"
+config/windows_native_icon="res://8-bit_saw_icon.ico"
 
 [display]
 
