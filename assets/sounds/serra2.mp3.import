@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/serra2.mp3-0440793421de8dc94dd885d63f6a0e21.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/serra2.mp3"
+dest_files=[ "res://.import/serra2.mp3-0440793421de8dc94dd885d63f6a0e21.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

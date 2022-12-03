@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/inicio_jogo.mp3-241686f37609742dc13f48f72552c355.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/inicio_jogo.mp3"
+dest_files=[ "res://.import/inicio_jogo.mp3-241686f37609742dc13f48f72552c355.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
